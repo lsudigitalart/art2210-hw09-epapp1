@@ -31,10 +31,18 @@ function draw() {
 
 }
 
-function Cat(img, tempX, tempY, tempSpeed); {
+function Cat(img, tempX, tempY, tempSpeed) {
     this.catImage = img;
     this.xpos = tempX;
     this.ypos = tempY;
     this.speed = tempSpeed;
+
+    this.move = function(){
+        this.xpos += random(-this.speed, this.speed);
+    }
+
+    this.display = function(){
+        image(this.catImage, this.xpos, this.ypos,);
+    }
 
 }
